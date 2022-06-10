@@ -109,6 +109,13 @@ function generateMarkdown(data) {
 ${renderLicenseBadge(license)}
 
 ## Table of Contents
+* [Description](#Description)
+* [Installation](#Installation)
+* [Usage](#Usage)
+* [License](#License)
+* [Contributing](#Contributing)
+* [Tests](#Tests)
+* [Questions/Contact](#Questions/Contact])
 
 ## Description
 ${description}
@@ -122,14 +129,14 @@ ${usage}
 ## License
 ${renderLicenseSection(license)}
 
-## How to Contribute
+## Contributing
 ${contribution}
 
 ## Tests
 ${testing}
 
 ## Questions/Contact
-${username}
+[github.com/${username}](https://github.com/${username})  
 ${email}
 `;
 }
