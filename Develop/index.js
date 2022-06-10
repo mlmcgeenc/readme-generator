@@ -94,6 +94,7 @@ const questions = [
 			'GNU Lesser General Public License v2.1',
 			'Mozilla Public License 2.0',
 			'The Unlicense',
+      'None',
 		],
 		default: 'MIT License',
 	},
