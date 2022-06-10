@@ -1,6 +1,6 @@
 
-# asd
-
+# README generator
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 ## Table of Contents
 * [Description](#Description)
@@ -12,21 +12,23 @@
 * [Questions/Contact](#Questions/Contact])
 
 ## Description
-asd
+A simple Node app to quickly create quality README.md files
 
 ## Installation
-asd
+To install the app clone the repo to your computer
 
 ## Usage
-asd
+In your command line navigate to the directory containing the app and type "node index". You will be provided with prompts asking for information about your project.
 
+## License
+This project is covered under the [MIT License](https://opensource.org/licenses/MIT)
 
 ## Contributing
-Contributions are welcome. All contributors are asked to review and adhere to the Contributor Covenant (https://www.contributor-covenant.org/)
+I am not accepting contributions to this project at this time
 
 ## Tests
 No tests are currently written for this project
 
 ## Questions/Contact
-[github.com/asd](https://github.com/asd)  
-Please contact me with questions at - asd@asd.com
+[github.com/mlmcgeenc](https://github.com/mlmcgeenc)  
+Please contact me with questions at - mlmcgeenc@gmail.com
