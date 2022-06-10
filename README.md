@@ -20,6 +20,8 @@ To install the app clone the repo to your computer
 ## Usage
 In your command line navigate to the directory containing the app and type "node index". You will be provided with prompts asking for information about your project.
 
+https://user-images.githubusercontent.com/51179862/173137403-5f65a163-001d-4df2-a736-96e5a23e4452.mov
+
 ## License
 This project is covered under the [MIT License](https://opensource.org/licenses/MIT)
 
