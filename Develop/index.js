@@ -5,6 +5,7 @@ const generateMarkdown = require('./utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
 const questions = [
+  // Project title
 	{
 		type: 'input',
 		name: 'title',
@@ -18,6 +19,7 @@ const questions = [
 			}
 		},
 	},
+  // Description
 	{
 		type: 'input',
 		name: 'description',
@@ -64,14 +66,8 @@ const questions = [
 		type: 'input',
 		name: 'contribution',
 		message: 'Describe how to contribute to your project',
-		validate: (contribution) => {
-			if (contribution) {
-				return true;
-			} else {
-				console.log('Contribution guidelines are required');
-				return false;
-			}
-		},
+		default:
+			'Contributions are welcome. All contributors are asked to review and adhere to the Contributor Covenant (https://www.contributor-covenant.org/)',
 	},
 	// Testing Instructions
 	{
@@ -121,10 +117,11 @@ const questions = [
 		name: 'email',
 		message: 'Enter your email address',
 		validate: (email) => {
-			if (email) {
+			// email validation regex from https://www.w3resource.com/javascript/form/email-validation.php
+			if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
 				return true;
 			} else {
-				console.log('Email is required');
+				console.log('A valid email address is required');
 				return false;
 			}
 		},

@@ -1,27 +1,27 @@
 
-    # Title
+# zxc
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-    ## Description
-    my desc
+## Table of Contents
 
-    ## Table of Contents
+## Description
+zxc
 
-    ## Installation
-    how to install
+## Installation
+zxc
 
-    ## Usage
-    how to use
+## Usage
+zxc
 
-    ## License
-    MIT License
+## License
+This project is covered under the [MIT License](https://opensource.org/licenses/MIT)
 
-    ## How to Contribute
-    how to contribute
+## How to Contribute
+Contributions are welcome. All contributors are asked to review and adhere to the Contributor Covenant (https://www.contributor-covenant.org/)
 
-    ## Tests
-    No tests are currently written for this project
+## Tests
+No tests are currently written for this project
 
-    ## Questions/Contact
-    username
-    myemail@email.com
-
+## Questions/Contact
+user
+e@e.com
