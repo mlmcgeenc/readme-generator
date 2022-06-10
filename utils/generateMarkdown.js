@@ -1,7 +1,7 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // ! TODO If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  switch (license) {
+	switch (license) {
 		case 'Apache License 2.0':
 			return '![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)';
 			break;
@@ -41,6 +41,9 @@ function renderLicenseBadge(license) {
 		case 'The Unlicense':
 			return '![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)';
 			break;
+		case 'None':
+			return '';
+			break;
 		default:
 			return '';
 	}
@@ -49,60 +52,70 @@ function renderLicenseBadge(license) {
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  switch (license) {
-    case 'Apache License 2.0' :
-      return 'https://opensource.org/licenses/Apache-2.0'
-      break;
-    case 'GNU General Public License v3.0' :
-      return 'https://www.gnu.org/licenses/gpl-3.0'
-      break;
-    case 'MIT License' :
-      return 'https://opensource.org/licenses/MIT'
-      break;
-    case 'BSD 2-clause "Simplified" License' :
-      return 'https://opensource.org/licenses/BSD-2-Clause'
-      break;
-    case 'BSD 3-Clause "New" or "Revised" license' :
-      return 'https://opensource.org/licenses/BSD-3-Clause'
-      break;
-    case 'Boost Software License 1.0' :
-      return 'https://www.boost.org/LICENSE_1_0.txt'
-      break;
-    case 'Creative Commons Zero v1.0 Universal' :
-      return 'http://creativecommons.org/publicdomain/zero/1.0/'
-      break;
-    case 'Eclipse Public License 1.0' :
-      return 'https://opensource.org/licenses/EPL-1.0'
-      break;
-    case 'GNU Affero General Public License v3.0' :
-      return 'https://www.gnu.org/licenses/agpl-3.0'
-      break;
-    case 'GNU General Public License v2.0' :
-      return 'https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html'
-      break;
-    case 'GNU Lesser General Public License v2.1' :
-      return 'https://www.gnu.org/licenses/lgpl-3.0'
-      break;
-    case 'Mozilla Public License 2.0' :
-      return 'https://opensource.org/licenses/MPL-2.0'
-      break;
-    case 'The Unlicense' :
-      return 'http://unlicense.org/'
-      break;
-    default:
-      return ''
-  }
+	switch (license) {
+		case 'Apache License 2.0':
+			return 'https://opensource.org/licenses/Apache-2.0';
+			break;
+		case 'GNU General Public License v3.0':
+			return 'https://www.gnu.org/licenses/gpl-3.0';
+			break;
+		case 'MIT License':
+			return 'https://opensource.org/licenses/MIT';
+			break;
+		case 'BSD 2-clause "Simplified" License':
+			return 'https://opensource.org/licenses/BSD-2-Clause';
+			break;
+		case 'BSD 3-Clause "New" or "Revised" license':
+			return 'https://opensource.org/licenses/BSD-3-Clause';
+			break;
+		case 'Boost Software License 1.0':
+			return 'https://www.boost.org/LICENSE_1_0.txt';
+			break;
+		case 'Creative Commons Zero v1.0 Universal':
+			return 'http://creativecommons.org/publicdomain/zero/1.0/';
+			break;
+		case 'Eclipse Public License 1.0':
+			return 'https://opensource.org/licenses/EPL-1.0';
+			break;
+		case 'GNU Affero General Public License v3.0':
+			return 'https://www.gnu.org/licenses/agpl-3.0';
+			break;
+		case 'GNU General Public License v2.0':
+			return 'https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html';
+			break;
+		case 'GNU Lesser General Public License v2.1':
+			return 'https://www.gnu.org/licenses/lgpl-3.0';
+			break;
+		case 'Mozilla Public License 2.0':
+			return 'https://opensource.org/licenses/MPL-2.0';
+			break;
+		case 'The Unlicense':
+			return 'http://unlicense.org/';
+			break;
+		case 'None':
+			return '';
+			break;
+		default:
+			return '';
+	}
 }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  return `This project is covered under the [${license}](${renderLicenseLink(license)})`;
+  if (license === 'None') {
+    return ''
+  } else {
+    return `
+## License
+This project is covered under the [${license}](${renderLicenseLink(license)})`;
+  }
+	// license === 'None' ? '' : `This project is covered under the [${license}](${renderLicenseLink(license)})`;
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  const { title, description, installation, usage, contribution, testing, license, username, email } = data
+	const { title, description, installation, usage, contribution, testing, license, username, email } = data;
 	console.log('Markdown created');
 	return `
 # ${title}
@@ -125,8 +138,6 @@ ${installation}
 
 ## Usage
 ${usage}
-
-## License
 ${renderLicenseSection(license)}
 
 ## Contributing
@@ -137,7 +148,7 @@ ${testing}
 
 ## Questions/Contact
 [github.com/${username}](https://github.com/${username})  
-${email}
+Please contact me with questions at - ${email}
 `;
 }
 
